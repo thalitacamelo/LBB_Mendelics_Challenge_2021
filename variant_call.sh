@@ -4,8 +4,8 @@
 #The reference sequence is indexed using 'bwa index'.
 #'bwa mem' algorithm mapps the sequenced reads to the reference genome.
 #'samtools' is used to get a BAM-format alignment file sorted by reference position.
-#'vcffilter' filter from 'vcflib' remove low quality reads from the vcf file (quality> 20 and read depth > 3).
-#This script assumes that the sequence length distribution is the same for all the sample reads and the adapters were trimmed off.
+#'vcffilter' filter from 'vcflib' remove low quality reads from the vcf file (quality > 20 and DP > 3)
+#This script assumes that the sequence length distribution is the same for all the sample reads and the adapters were trimmed.
 #'freebayes', 'bwa', 'samtools', 'bedtools', 'bcftools' and 'libvcflib-tools' can be installed using 'sudo apt install' on Ubuntu.
 #Installing 'FastQC' is as simple as unzipping the zip file it comes in into a suitable location. But it requires a suitable Java Runtime Environment (JRE) installed.
 #Running 'variant_call.sh' inside a folder holding the reference sequence and the sample reads (paired end) will output a variants.vcf.gz file as well as the intermediate ones (.sam; .bam...)
@@ -24,6 +24,16 @@ fi
 
 if [[ ! -f $reference  ]]; then
     echo file $reference not found
+    exit 1
+fi
+
+if [[ ! -f $read1  ]]; then
+    echo file $read1 not found
+    exit 1
+fi
+
+if [[ ! -f $read2  ]]; then
+    echo file $read2 not found
     exit 1
 fi
 
@@ -55,7 +65,7 @@ samtools index $sorted_fixmate_output
 variants=variants.vcf
 freebayes -f $reference $sorted_fixmate_output > $variants
 #
-#The 'vcffilter' filter by variant quality> 20 and read depth > 3
+#The 'vcffilter' filter by variant quality > 20 and DP > 3
 #
 filtered_variants=variants_Q20_DP3.vcf
 vcffilter -f "QUAL > 20 & DP > 3" $variants > $filtered_variants
