@@ -80,5 +80,5 @@ chr22   36028402        .       A       C       718.463 .       AB=0;ABP=0;AC=2;
 Printing 'nonsynonymous' from annovar_hg38_multianno.txt
 ```
 $ grep "$nonsynonymous" annovar_hg38_multianno.txt
-chr22   36028402        36028402        A       C       exonic  RBFOX2  .       nonsynonymous SNV       RBFOX2:NM_001082578:exon1:c.T24G:p.H8Q,RBFOX2:NM_001082579:exon1:c.T24G:p.H8Q,RBFOX2:NM_001349999:exon1:c.T24G:p.H8Q     1       1       1       1       1       1       1       1       .       .       .       .       .       1       1       1       1       1       1       1       1       1
+chr22   36028402        36028402        A       C       exonic  RBFOX2  .       nonsynonymous SNV       RBFOX2:NM_001082578:exon1:c.T24G:p.H8Q,RBFOX2:NM_001082579:exon1:c.T24G:p.H8Q,RBFOX2:NM_001349999:exon1:c.T24G:p.H8Q     1       1       1       1       1       1       1       1       .       .       .       .       .       1       1       1       1       0.9986  1       1       1       1       1       1       rs9607299
 ```
