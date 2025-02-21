@@ -1,4 +1,4 @@
-# Repository Submitted to the [LBB-Mendelics-Challenge-2021](https://github.com/mendelics/lbb-mendelics-2021/tree/main)
+## Repository Submitted to the [LBB-Mendelics-Challenge-2021](https://github.com/mendelics/lbb-mendelics-2021/tree/main)
 
 This was my first GitHub repository. At the time, I had just learned code flow control, functions, and command-line arguments. I had no experience with sequencing analysis pipelines but understood key concepts like alignment, variant calling, and annotation.
 
