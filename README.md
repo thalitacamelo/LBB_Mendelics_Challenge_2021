@@ -2,7 +2,7 @@
 
 This was my first GitHub repository. At the time, I had just learned code flow control, functions, and command-line arguments. I had no experience with sequencing analysis pipelines but understood key concepts like alignment, variant calling, and annotation.
 
-With zero knowledge of the recommended tools, I relied on my basic Bash knowledge and problem-solving skills . Over three days (8 hours/day), I used standard bioinformatics tools and scripting to complete the tasks.
+With zero knowledge of the recommended tools, I relied on my basic **Bash** knowledge and problem-solving skills . Over three days (8 hours/day), I used standard bioinformatics tools and scripting to complete the tasks.
 
 I didn’t win, but the challenge led to a job at Mendelics, where I spent 2 years and 7 months learning software development good practices and large-scale data analysis.
 
